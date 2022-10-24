@@ -91,15 +91,24 @@
       if($(this).hasClass('active')){
         let text = $(this).text('もう一度占う！');
         $('.result').fadeIn(900);
+
         for(let i = 0; i < 3; i++){
         let random = Math.floor( Math.random() * 3 );
         $('.money .stars').text(fortuneResults.money[random].stars);
         $('.money .detail').text(fortuneResults.money[random].detail);
+        }
+
+        for(let i = 0; i < 3; i++){
+        let random = Math.floor( Math.random() * 3 );
         $('.work .stars').text(fortuneResults.work[random].stars);
         $('.work .detail').text(fortuneResults.work[random].detail);
+        }
+
+        for(let i = 0; i < 3; i++){
+        let random = Math.floor( Math.random() * 3 );
         $('.health .stars').text(fortuneResults.health[random].stars);
         $('.health .detail').text(fortuneResults.health[random].detail);
-        }        
+        }
       } else {
         let text = $(this).text('運勢を占う！');
         $('.result').fadeOut(300);
